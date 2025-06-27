@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Team India Cricket Stars</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <img src="https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg" alt="India Logo">
+    <h1>Team India</h1>
+    <p class="slogan">Bleed Blue. Play Bold.</p>
+  </header>
+
+  <section class="grid" id="playerGrid">
+    <!-- Player cards will be loaded here -->
+  </section>
+
+  <div class="modal" id="playerModal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2 id="playerName"></h2>
+      <p id="playerRole" style="font-weight:bold; color:#0d47a1;"></p>
+      <p><strong>Strike Rate:</strong> <span id="strikeRate"></span></p>
+      <p><strong>Matches Played:</strong> <span id="matches"></span></p>
+      <p><strong>Jersey Number:</strong> <span id="jersey"></span></p>
+      <p><strong>Best Performance:</strong> <span id="best"></span></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

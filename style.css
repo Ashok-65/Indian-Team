@@ -1,0 +1,139 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background: #e3f2fd;
+  text-align: center;
+  color: #0d47a1;
+}
+
+header {
+  background-color: #0d47a1;
+  color: white;
+  padding: 2rem 1rem;
+}
+
+header img {
+  width: 100px;
+  animation: pulse 2s infinite;
+}
+
+h1 {
+  margin: 0.5rem 0 0.2rem;
+  font-size: 2.5rem;
+  animation: fadeIn 2s ease-in-out;
+}
+
+p.slogan {
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #bbdefb;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: floatUp 0.5s ease forwards, scaleBounce 0.8s ease-in-out;
+  touch-action: manipulation;
+}
+
+.card:hover,
+.card:active {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.card h3 {
+  margin: 0.8rem 0 0.3rem;
+  color: #0d47a1;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.4s ease;
+}
+
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 400px;
+  text-align: left;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.close {
+  float: right;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+@keyframes floatUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleBounce {
+  0% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
